@@ -12,7 +12,7 @@ import org.page.objects.HomePage;
 import org.page.objects.ProductsPage;
 import org.page.objects.SignupFormPage;
 import org.page.objects.SignupLoginPage;
-import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -95,7 +95,7 @@ public class TestCase5 extends Configuration{
 		closeAd();
 	}
 	
-	@AfterMethod
+	@AfterClass
 	public void cleanUp() throws InterruptedException, IOException {
 		homeObj.deleteAccount();
 		deleteAccObj = new DeleteAccountSuccessfulPage(driver);
