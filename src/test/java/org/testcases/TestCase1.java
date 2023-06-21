@@ -1,9 +1,12 @@
 package org.testcases;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.base.config.ConfigProperties;
 import org.base.config.Configuration;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.page.objects.CartPage;
 import org.page.objects.CreateAccountSuccessfulPage;
@@ -17,6 +20,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.google.common.io.Files;
+
 public class TestCase1 extends Configuration{
 	WebDriver driver;
 	HomePage homeObj;
@@ -27,6 +32,7 @@ public class TestCase1 extends Configuration{
 	CreateAccountSuccessfulPage createAccObj;
 	DeleteAccountSuccessfulPage deleteAccObj;
 	String port;
+	File screenShotFile;
 	@Parameters({"Port"})
 	@BeforeClass
 	public void initializeWebsite(String Port) throws IOException {
@@ -75,10 +81,12 @@ public class TestCase1 extends Configuration{
 		
 		deleteAccObj.verifyAccountDelete();
 		deleteAccObj.deleteContinue();
-	}
-	
-	@AfterMethod
-	public void closeTest() {
+		screenShotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		driver.quit();
+		if(port.equals("5555")) {
+			Files.copy(screenShotFile, new File("C:\\Users\\maXx\\ProjectScreenshots\\testcase1chrome.png"));
+		}else {
+			Files.copy(screenShotFile, new File("C:\\Users\\maXx\\ProjectScreenshots\\testcase1edge.png"));
+		}
 	}
 }

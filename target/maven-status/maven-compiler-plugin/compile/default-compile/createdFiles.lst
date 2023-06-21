@@ -1,0 +1,13 @@
+org\page\objects\CartPage.class
+org\page\objects\HomePage.class
+org\page\objects\SignupLoginPage.class
+org\page\objects\ApiTestingPage.class
+org\page\objects\ProductDetailsPage.class
+org\page\objects\ProductsPage.class
+org\base\config\ConfigProperties.class
+org\page\objects\TestCasesPage.class
+manipal\capstone\App.class
+org\page\objects\SignupFormPage.class
+org\page\objects\DeleteAccountSuccessfulPage.class
+org\base\config\Configuration.class
+org\page\objects\CreateAccountSuccessfulPage.class

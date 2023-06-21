@@ -1,9 +1,12 @@
 package org.testcases;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.base.config.ConfigProperties;
 import org.base.config.Configuration;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.page.objects.CartPage;
 import org.page.objects.CreateAccountSuccessfulPage;
@@ -12,10 +15,12 @@ import org.page.objects.HomePage;
 import org.page.objects.ProductsPage;
 import org.page.objects.SignupFormPage;
 import org.page.objects.SignupLoginPage;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.google.common.io.Files;
 
 public class TestCase5 extends Configuration{
 	WebDriver driver;
@@ -27,6 +32,8 @@ public class TestCase5 extends Configuration{
 	CreateAccountSuccessfulPage createAccObj;
 	DeleteAccountSuccessfulPage deleteAccObj;
 	String port;
+	File screenShotFile;
+	
 	@Parameters({"Port"})
 	@BeforeClass
 	public void initializeWebsite(String Port) throws IOException, InterruptedException {
@@ -61,7 +68,7 @@ public class TestCase5 extends Configuration{
 	}
 	
 	@Test
-	public void searchProductCase() throws InterruptedException {
+	public void searchProductCase() throws InterruptedException, IOException {
 		closeAd();
 		homeObj.navigateToProductsPage();
 		
@@ -93,10 +100,7 @@ public class TestCase5 extends Configuration{
 		
 		homeObj.navigateToCartPage();
 		closeAd();
-	}
-	
-	@AfterClass
-	public void cleanUp() throws InterruptedException, IOException {
+		screenShotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		homeObj.deleteAccount();
 		deleteAccObj = new DeleteAccountSuccessfulPage(driver);
 		
@@ -104,6 +108,18 @@ public class TestCase5 extends Configuration{
 		closeAd();
 		
 		deleteAccObj.deleteContinue();
+		
+	}
+	
+	@AfterMethod
+	public void cleanUp() throws InterruptedException, IOException{
+		
+		
+		if(port.equals("5555")) {
+			Files.copy(screenShotFile, new File("C:\\Users\\maXx\\ProjectScreenshots\\testcase5chrome.png"));
+		}else {
+			Files.copy(screenShotFile, new File("C:\\Users\\maXx\\ProjectScreenshots\\testcase5edge.png"));
+		}
 		
 		driver.quit();
 	}

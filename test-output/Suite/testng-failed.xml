@@ -4,13 +4,6 @@
   <test thread-count="2" parallel="tests" name="Chrome Test(failed)">
     <parameter name="Port" value="5555"/>
     <classes>
-      <class name="org.testcases.TestCase1">
-        <methods>
-          <include name="RegisterUserCase"/>
-          <include name="initializeWebsite"/>
-          <include name="closeTest"/>
-        </methods>
-      </class> <!-- org.testcases.TestCase1 -->
       <class name="org.testcases.TestCase5">
         <methods>
           <include name="cleanUp"/>
@@ -18,74 +11,6 @@
           <include name="initializeWebsite"/>
         </methods>
       </class> <!-- org.testcases.TestCase5 -->
-      <class name="org.testcases.TestCase6">
-        <methods>
-          <include name="initializeWebsite"/>
-          <include name="closeTest"/>
-          <include name="writeReviewTestCase"/>
-        </methods>
-      </class> <!-- org.testcases.TestCase6 -->
-      <class name="org.testcases.TestCase4">
-        <methods>
-          <include name="removeItemsTestCase"/>
-          <include name="initializeWebsite"/>
-          <include name="closeTest"/>
-        </methods>
-      </class> <!-- org.testcases.TestCase4 -->
-      <class name="org.testcases.TestCase2">
-        <methods>
-          <include name="loginCorrectTest"/>
-          <include name="initializeWebsite"/>
-          <include name="closeTest"/>
-        </methods>
-      </class> <!-- org.testcases.TestCase2 -->
-      <class name="org.testcases.TestCase3">
-        <methods>
-          <include name="initializeWebsite"/>
-          <include name="loginWrongTest"/>
-          <include name="closeTest"/>
-        </methods>
-      </class> <!-- org.testcases.TestCase3 -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
-  <test thread-count="2" parallel="tests" name="Microsoft Edge Test(failed)">
-    <parameter name="Port" value="6666"/>
-    <classes>
-      <class name="org.testcases.TestCase5">
-        <methods>
-          <include name="cleanUp"/>
-          <include name="searchProductCase"/>
-          <include name="initializeWebsite"/>
-        </methods>
-      </class> <!-- org.testcases.TestCase5 -->
-      <class name="org.testcases.TestCase6">
-        <methods>
-          <include name="initializeWebsite"/>
-          <include name="closeTest"/>
-          <include name="writeReviewTestCase"/>
-        </methods>
-      </class> <!-- org.testcases.TestCase6 -->
-      <class name="org.testcases.TestCase4">
-        <methods>
-          <include name="removeItemsTestCase"/>
-          <include name="initializeWebsite"/>
-          <include name="closeTest"/>
-        </methods>
-      </class> <!-- org.testcases.TestCase4 -->
-      <class name="org.testcases.TestCase2">
-        <methods>
-          <include name="loginCorrectTest"/>
-          <include name="initializeWebsite"/>
-          <include name="closeTest"/>
-        </methods>
-      </class> <!-- org.testcases.TestCase2 -->
-      <class name="org.testcases.TestCase3">
-        <methods>
-          <include name="initializeWebsite"/>
-          <include name="loginWrongTest"/>
-          <include name="closeTest"/>
-        </methods>
-      </class> <!-- org.testcases.TestCase3 -->
-    </classes>
-  </test> <!-- Microsoft Edge Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
