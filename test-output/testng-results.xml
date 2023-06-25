@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-25T15:24:16Z" name="Suite" finished-at="2023-06-25T15:24:46Z" duration-ms="30152">
+  <suite started-at="2023-06-25T17:45:08Z" name="Suite" finished-at="2023-06-25T17:50:33Z" duration-ms="325444">
     <groups>
     </groups>
-    <test started-at="2023-06-25T15:24:16Z" name="Chrome Test" finished-at="2023-06-25T15:24:37Z" duration-ms="20753">
+    <test started-at="2023-06-25T17:45:08Z" name="Chrome Test" finished-at="2023-06-25T17:49:59Z" duration-ms="291122">
       <class name="org.testcases.TestCase4">
-        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase4@39d9314d]" started-at="2023-06-25T15:24:16Z" name="initializeWebsite" finished-at="2023-06-25T15:24:23Z" duration-ms="7289" status="PASS">
+        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase4@6bf08014]" started-at="2023-06-25T17:47:30Z" name="initializeWebsite" finished-at="2023-06-25T17:47:37Z" duration-ms="7335" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,112 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeWebsite -->
-        <test-method signature="removeItemsTestCase()[pri:0, instance:org.testcases.TestCase4@39d9314d]" started-at="2023-06-25T15:24:23Z" name="removeItemsTestCase" finished-at="2023-06-25T15:24:37Z" duration-ms="13445" status="PASS">
+        <test-method signature="removeItemsTestCase()[pri:0, instance:org.testcases.TestCase4@6bf08014]" started-at="2023-06-25T17:47:37Z" name="removeItemsTestCase" finished-at="2023-06-25T17:47:57Z" duration-ms="19866" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeItemsTestCase -->
       </class> <!-- org.testcases.TestCase4 -->
+      <class name="org.testcases.TestCase3">
+        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase3@4416d64f]" started-at="2023-06-25T17:47:01Z" name="initializeWebsite" finished-at="2023-06-25T17:47:13Z" duration-ms="11792" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5555]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebsite -->
+        <test-method signature="loginWrongTest()[pri:0, instance:org.testcases.TestCase3@4416d64f]" started-at="2023-06-25T17:47:13Z" name="loginWrongTest" finished-at="2023-06-25T17:47:29Z" duration-ms="16414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWrongTest -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:org.testcases.TestCase3@4416d64f]" started-at="2023-06-25T17:47:29Z" name="closeTest" finished-at="2023-06-25T17:47:30Z" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- org.testcases.TestCase3 -->
+      <class name="org.testcases.TestCase2">
+        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase2@50dfbc58]" started-at="2023-06-25T17:45:55Z" name="initializeWebsite" finished-at="2023-06-25T17:46:30Z" duration-ms="34330" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5555]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebsite -->
+        <test-method signature="loginCorrectTest()[pri:0, instance:org.testcases.TestCase2@50dfbc58]" started-at="2023-06-25T17:46:30Z" name="loginCorrectTest" finished-at="2023-06-25T17:47:01Z" duration-ms="31570" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginCorrectTest -->
+      </class> <!-- org.testcases.TestCase2 -->
+      <class name="org.testcases.TestCase1">
+        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase1@73a8da0f]" started-at="2023-06-25T17:45:08Z" name="initializeWebsite" finished-at="2023-06-25T17:45:17Z" duration-ms="9245" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5555]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebsite -->
+        <test-method signature="RegisterUserCase()[pri:0, instance:org.testcases.TestCase1@73a8da0f]" started-at="2023-06-25T17:45:17Z" name="RegisterUserCase" finished-at="2023-06-25T17:45:55Z" duration-ms="38455" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterUserCase -->
+      </class> <!-- org.testcases.TestCase1 -->
+      <class name="org.testcases.TestCase6">
+        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase6@732d0d24]" started-at="2023-06-25T17:49:35Z" name="initializeWebsite" finished-at="2023-06-25T17:49:42Z" duration-ms="6777" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5555]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebsite -->
+        <test-method signature="writeReviewTestCase()[pri:0, instance:org.testcases.TestCase6@732d0d24]" started-at="2023-06-25T17:49:42Z" name="writeReviewTestCase" finished-at="2023-06-25T17:49:59Z" duration-ms="16712" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeReviewTestCase -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:org.testcases.TestCase6@732d0d24]" started-at="2023-06-25T17:49:59Z" name="closeTest" finished-at="2023-06-25T17:49:59Z" duration-ms="157" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- org.testcases.TestCase6 -->
+      <class name="org.testcases.TestCase5">
+        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase5@5e3d57c7]" started-at="2023-06-25T17:47:57Z" name="initializeWebsite" finished-at="2023-06-25T17:48:36Z" duration-ms="39514" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5555]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebsite -->
+        <test-method signature="searchProductCase()[pri:0, instance:org.testcases.TestCase5@5e3d57c7]" started-at="2023-06-25T17:48:36Z" name="searchProductCase" finished-at="2023-06-25T17:49:35Z" duration-ms="58643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductCase -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:org.testcases.TestCase5@5e3d57c7]" started-at="2023-06-25T17:49:35Z" name="cleanUp" finished-at="2023-06-25T17:49:35Z" duration-ms="166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- org.testcases.TestCase5 -->
     </test> <!-- Chrome Test -->
-    <test started-at="2023-06-25T15:24:16Z" name="Microsoft Edge Test" finished-at="2023-06-25T15:24:46Z" duration-ms="30152">
+    <test started-at="2023-06-25T17:45:08Z" name="Microsoft Edge Test" finished-at="2023-06-25T17:50:33Z" duration-ms="325444">
       <class name="org.testcases.TestCase4">
-        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase4@3e74829]" started-at="2023-06-25T15:24:16Z" name="initializeWebsite" finished-at="2023-06-25T15:24:26Z" duration-ms="10043" status="PASS">
+        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase4@488d1cd7]" started-at="2023-06-25T17:47:37Z" name="initializeWebsite" finished-at="2023-06-25T17:47:46Z" duration-ms="9417" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,11 +134,108 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeWebsite -->
-        <test-method signature="removeItemsTestCase()[pri:0, instance:org.testcases.TestCase4@3e74829]" started-at="2023-06-25T15:24:26Z" name="removeItemsTestCase" finished-at="2023-06-25T15:24:46Z" duration-ms="20097" status="PASS">
+        <test-method signature="removeItemsTestCase()[pri:0, instance:org.testcases.TestCase4@488d1cd7]" started-at="2023-06-25T17:47:46Z" name="removeItemsTestCase" finished-at="2023-06-25T17:48:01Z" duration-ms="14852" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeItemsTestCase -->
       </class> <!-- org.testcases.TestCase4 -->
+      <class name="org.testcases.TestCase3">
+        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase3@571c5681]" started-at="2023-06-25T17:47:10Z" name="initializeWebsite" finished-at="2023-06-25T17:47:29Z" duration-ms="19102" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6666]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebsite -->
+        <test-method signature="loginWrongTest()[pri:0, instance:org.testcases.TestCase3@571c5681]" started-at="2023-06-25T17:47:29Z" name="loginWrongTest" finished-at="2023-06-25T17:47:37Z" duration-ms="7895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWrongTest -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:org.testcases.TestCase3@571c5681]" started-at="2023-06-25T17:47:37Z" name="closeTest" finished-at="2023-06-25T17:47:37Z" duration-ms="227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- org.testcases.TestCase3 -->
+      <class name="org.testcases.TestCase2">
+        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase2@6d07a63d]" started-at="2023-06-25T17:46:05Z" name="initializeWebsite" finished-at="2023-06-25T17:46:45Z" duration-ms="39869" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6666]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebsite -->
+        <test-method signature="loginCorrectTest()[pri:0, instance:org.testcases.TestCase2@6d07a63d]" started-at="2023-06-25T17:46:45Z" name="loginCorrectTest" finished-at="2023-06-25T17:47:10Z" duration-ms="24544" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginCorrectTest -->
+      </class> <!-- org.testcases.TestCase2 -->
+      <class name="org.testcases.TestCase1">
+        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase1@479ceda0]" started-at="2023-06-25T17:45:08Z" name="initializeWebsite" finished-at="2023-06-25T17:45:18Z" duration-ms="10140" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6666]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebsite -->
+        <test-method signature="RegisterUserCase()[pri:0, instance:org.testcases.TestCase1@479ceda0]" started-at="2023-06-25T17:45:18Z" name="RegisterUserCase" finished-at="2023-06-25T17:46:05Z" duration-ms="47584" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterUserCase -->
+      </class> <!-- org.testcases.TestCase1 -->
+      <class name="org.testcases.TestCase6">
+        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase6@38ba6ce3]" started-at="2023-06-25T17:50:02Z" name="initializeWebsite" finished-at="2023-06-25T17:50:12Z" duration-ms="9977" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6666]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebsite -->
+        <test-method signature="writeReviewTestCase()[pri:0, instance:org.testcases.TestCase6@38ba6ce3]" started-at="2023-06-25T17:50:12Z" name="writeReviewTestCase" finished-at="2023-06-25T17:50:33Z" duration-ms="20895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeReviewTestCase -->
+        <test-method is-config="true" signature="closeTest()[pri:0, instance:org.testcases.TestCase6@38ba6ce3]" started-at="2023-06-25T17:50:33Z" name="closeTest" finished-at="2023-06-25T17:50:33Z" duration-ms="207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- org.testcases.TestCase6 -->
+      <class name="org.testcases.TestCase5">
+        <test-method is-config="true" signature="initializeWebsite(java.lang.String)[pri:0, instance:org.testcases.TestCase5@68dc098b]" started-at="2023-06-25T17:48:01Z" name="initializeWebsite" finished-at="2023-06-25T17:48:49Z" duration-ms="47840" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6666]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebsite -->
+        <test-method signature="searchProductCase()[pri:0, instance:org.testcases.TestCase5@68dc098b]" started-at="2023-06-25T17:48:49Z" name="searchProductCase" finished-at="2023-06-25T17:50:02Z" duration-ms="72621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductCase -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:org.testcases.TestCase5@68dc098b]" started-at="2023-06-25T17:50:02Z" name="cleanUp" finished-at="2023-06-25T17:50:02Z" duration-ms="257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- org.testcases.TestCase5 -->
     </test> <!-- Microsoft Edge Test -->
   </suite> <!-- Suite -->
 </testng-results>
