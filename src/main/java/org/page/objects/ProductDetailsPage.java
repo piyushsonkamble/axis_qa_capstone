@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
-public class ProductDetailsPage extends HomePage{
+public class ProductDetailsPage extends NavigationBar{
 	public ProductDetailsPage(WebDriver driver) throws IOException {
 		super(driver);
 		ConfigProperties.initializePropertyFile();

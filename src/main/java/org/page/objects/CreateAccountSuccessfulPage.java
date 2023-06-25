@@ -2,14 +2,16 @@ package org.page.objects;
 
 import java.io.IOException;
 
+import org.base.config.ConfigProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
-public class CreateAccountSuccessfulPage extends HomePage{
+public class CreateAccountSuccessfulPage extends NavigationBar{
 	public CreateAccountSuccessfulPage(WebDriver driver) throws IOException {
 		super(driver);
+		ConfigProperties.initializePropertyFile();
 	}
 	
 	@FindBy(xpath="//*[text()='Account Created!']")
@@ -24,7 +26,7 @@ public class CreateAccountSuccessfulPage extends HomePage{
 	
 	public void createContinue() {
 		accountCreatedContinueButton.click();
-		if(accountCreatedContinueButton.isDisplayed()) {
+		if(driver.getTitle().equalsIgnoreCase("Automation Exercise - Account Created")) {
 			accountCreatedContinueButton.click();
 		}
 	}

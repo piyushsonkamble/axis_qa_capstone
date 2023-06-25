@@ -2,7 +2,10 @@ package org.testcases;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
+import org.base.config.ConfigProperties;
 import org.base.config.Configuration;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -23,6 +26,8 @@ public class TestCase6 extends Configuration{
 	ProductsPage productsObj;
 	ProductDetailsPage productViewObj;
 	String port;
+	String path;
+	
 	@Parameters({"Port"})
 	@BeforeClass
 	public void initializeWebsite(String Port) throws IOException {
@@ -31,18 +36,21 @@ public class TestCase6 extends Configuration{
 		homeObj = new HomePage(driver);
 		productsObj = new ProductsPage(driver);
 		productViewObj = new ProductDetailsPage(driver);
+		ConfigProperties.initializePropertyFile();
+		path = ConfigProperties.property.getProperty("Path");
 	}
 	
 	@Test
-	public void writeReviewTestCase() throws InterruptedException, IOException {
-		homeObj.navigateToProductsPage();
+	public void writeReviewTestCase() throws IOException, InterruptedException {
+		closeAd();
 		
-		Thread.sleep(2000);
+		homeObj.navigateToProductsPage();
+				
 		closeAd();
 		
 		productsObj.navigateToProductDetailsPage();
 		
-		Thread.sleep(2000);
+	
 		closeAd();
 		
 		productViewObj.verifyWriteReviewLabel();
@@ -51,9 +59,11 @@ public class TestCase6 extends Configuration{
 		
 		File screenShotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		if(port.equals("5555")) {
-			Files.copy(screenShotFile, new File("C:\\Users\\maXx\\ProjectScreenshots\\testcase6chrome.png"));
+			Files.copy(screenShotFile, new File(path +"chrome "+ new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss").
+					format(Calendar.getInstance().getTime())+".png"));
 		}else {
-			Files.copy(screenShotFile, new File("C:\\Users\\maXx\\ProjectScreenshots\\testcase6edge.png"));
+			Files.copy(screenShotFile, new File(path +"edge "+ new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss").
+					format(Calendar.getInstance().getTime())+".png"));
 		}
 	}
 	

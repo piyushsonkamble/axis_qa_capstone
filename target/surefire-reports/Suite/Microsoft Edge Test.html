@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Microsoft Edge Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jun 22 02:37:12 IST 2023</td>
+<td>Started on:</td><td>Sun Jun 25 11:19:50 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>316 seconds (316969 ms)</td>
+<tr><td>Total time:</td><td>13 seconds (13936 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,43 +67,49 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='org.testcases.TestCase1.RegisterUserCase()'><b>RegisterUserCase</b><br>Test class: org.testcases.TestCase1</td>
-<td></td>
-<td>36</td>
-<td>org.testcases.TestCase1@16b2bb0c</td></tr>
-<tr>
-<td title='org.testcases.TestCase2.loginCorrectTest()'><b>loginCorrectTest</b><br>Test class: org.testcases.TestCase2</td>
-<td></td>
-<td>30</td>
-<td>org.testcases.TestCase2@327af41b</td></tr>
-<tr>
-<td title='org.testcases.TestCase3.loginWrongTest()'><b>loginWrongTest</b><br>Test class: org.testcases.TestCase3</td>
-<td></td>
-<td>8</td>
-<td>org.testcases.TestCase3@6cb6decd</td></tr>
-<tr>
 <td title='org.testcases.TestCase4.removeItemsTestCase()'><b>removeItemsTestCase</b><br>Test class: org.testcases.TestCase4</td>
-<td></td>
-<td>21</td>
-<td>org.testcases.TestCase4@c7045b9</td></tr>
-<tr>
-<td title='org.testcases.TestCase5.searchProductCase()'><b>searchProductCase</b><br>Test class: org.testcases.TestCase5</td>
-<td></td>
-<td>89</td>
-<td>org.testcases.TestCase5@f99f5e0</td></tr>
-<tr>
-<td title='org.testcases.TestCase6.writeReviewTestCase()'><b>writeReviewTestCase</b><br>Test class: org.testcases.TestCase6</td>
-<td></td>
-<td>9</td>
-<td>org.testcases.TestCase6@6aa61224</td></tr>
+<td><div><pre>java.lang.NullPointerException
+	at org.page.objects.HomePage.addItemsToCart(HomePage.java:33)
+	at org.testcases.TestCase4.removeItemsTestCase(TestCase4.java:43)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1235558421", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1235558421'><pre>java.lang.NullPointerException
+	at org.page.objects.HomePage.addItemsToCart(HomePage.java:33)
+	at org.testcases.TestCase4.removeItemsTestCase(TestCase4.java:43)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>4</td>
+<td>org.testcases.TestCase4@1f75a668</td></tr>
 </table><p>
 </body>
 </html>

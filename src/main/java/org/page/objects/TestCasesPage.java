@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class TestCasesPage extends HomePage{
+public class TestCasesPage extends NavigationBar{
 	public TestCasesPage(WebDriver driver) throws IOException {
 		super(driver);
 	}

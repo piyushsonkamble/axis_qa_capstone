@@ -7,7 +7,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -16,7 +15,7 @@ public class Configuration {
 	String nodeURL;
 	static JavascriptExecutor js;
 	
-	public WebDriver getDriver() {
+	public static WebDriver getDriver() {
 		return driver.get();
 	}
 	
@@ -31,13 +30,9 @@ public class Configuration {
 		if (Port.equalsIgnoreCase("5555")) {
 			nodeURL = "http://192.168.31.206:4444/wd/hub";
 			System.out.println("Chrome Browser Initiated");
-			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.addArguments("--incognito");
 			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-			capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 			capabilities.setBrowserName("chrome");
 			capabilities.setPlatform(Platform.WINDOWS);
-			chromeOptions.merge(capabilities);
 
 			setDriver(new RemoteWebDriver(new URL(nodeURL), capabilities));
 
@@ -62,9 +57,11 @@ public class Configuration {
 		return getDriver();
 	}
 	
-	public static void closeAd() {
-		js = (JavascriptExecutor) driver.get();
+	public static void closeAd() throws InterruptedException {
+		Thread.sleep(1000);
+		js = (JavascriptExecutor) driver.get();		
 		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+		Thread.sleep(1000);
 	}
 	
 	public static void scrollDown() {

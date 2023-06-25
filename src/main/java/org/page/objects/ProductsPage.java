@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
-public class ProductsPage extends HomePage{
+public class ProductsPage extends NavigationBar{
 	public ProductsPage(WebDriver driver) throws IOException {
 		super(driver);
 		ConfigProperties.initializePropertyFile();
@@ -52,9 +52,9 @@ public class ProductsPage extends HomePage{
 		int count = 1;
 		Configuration.scrollDown();
 		while(i < 19) {
-			Thread.sleep(2000);
-			String path = "(//*[text()='Add to cart'])["+i+"]";
-				driver.findElement(By.xpath(path)).click();
+			
+			String locator = "(//*[text()='Add to cart'])["+i+"]";
+				driver.findElement(By.xpath(locator)).click();
 				driver.findElement(By.xpath("//*[text()='Continue Shopping']")).click();
 				i += 2;
 				count++;
@@ -64,9 +64,9 @@ public class ProductsPage extends HomePage{
 			}
 		}
 	
-	public void navigateToProductDetailsPage() throws InterruptedException {
+	public void navigateToProductDetailsPage() {
 		viewProduct1Button.click();
-		Thread.sleep(2000);
+		
 		if(!driver.getCurrentUrl().equalsIgnoreCase("https://automationexercise.com/product_details/1")) {
 			viewProduct1Button.click();
 		}

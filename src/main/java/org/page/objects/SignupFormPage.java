@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Parameters;
 
 
-public class SignupFormPage extends HomePage {
+public class SignupFormPage extends NavigationBar {
 	
 	public SignupFormPage(WebDriver driver) throws IOException {
 		super(driver);
@@ -149,27 +149,10 @@ public class SignupFormPage extends HomePage {
 		
 	}
 
-//	String Gender = "Male";
-//	String Name = "Walter White";
-//	String FirstName = "Walter";
-//	String LastName = "White";
-//	String Email = "walterwhite683@gmail.com";
-//	String Password = "Zgve6@Arbwy";
-//	String Day = "26";
-//	String Month = "September";
-//	String Year = "2003";
-//	String Company = "Google";
-//	String Address = "24 William Street";
-//	String City = "New York";
-//	String State = "Ohio";
-//	String Country = "United States";
-//	String Zipcode = "179204";
-//	String MobileNumber = "5368441367";
 
 	@Parameters({"Port"})
-	public void fillDetails(String Port) throws InterruptedException {
+	public void fillDetails(String Port) {
 		getDetails(Port);
-		Thread.sleep(2000);
 		if (Gender.equalsIgnoreCase("Male")) {
 			mrRadioButton.click();
 		}

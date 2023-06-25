@@ -10,7 +10,6 @@
 		<class name="org.testcases.TestCase4"/>
 		<class name="org.testcases.TestCase5"/>
 		<class name="org.testcases.TestCase6"/>
-
       
     </classes>
   </test> 
@@ -25,7 +24,6 @@
 		<class name="org.testcases.TestCase5"/>
 		<class name="org.testcases.TestCase6"/>
 
-      
     </classes>
   </test> 
    <!-- Test -->

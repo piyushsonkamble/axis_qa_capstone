@@ -2,13 +2,15 @@ package org.page.objects;
 
 import java.io.IOException;
 
+import org.base.config.ConfigProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ApiTestingPage extends HomePage {
+public class ApiTestingPage extends NavigationBar {
 	public ApiTestingPage(WebDriver driver) throws IOException {
 		super(driver);
+		ConfigProperties.initializePropertyFile();
 	}
 	@FindBy(partialLinkText="API 1")
 	WebElement api1Link;

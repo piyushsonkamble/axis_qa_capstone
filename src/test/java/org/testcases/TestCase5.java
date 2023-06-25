@@ -2,6 +2,8 @@ package org.testcases;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import org.base.config.ConfigProperties;
 import org.base.config.Configuration;
@@ -22,7 +24,7 @@ import org.testng.annotations.Test;
 
 import com.google.common.io.Files;
 
-public class TestCase5 extends Configuration{
+public class TestCase5 extends Configuration {
 	WebDriver driver;
 	HomePage homeObj;
 	CartPage cartObj;
@@ -33,8 +35,9 @@ public class TestCase5 extends Configuration{
 	DeleteAccountSuccessfulPage deleteAccObj;
 	String port;
 	File screenShotFile;
-	
-	@Parameters({"Port"})
+	String path;
+
+	@Parameters({ "Port" })
 	@BeforeClass
 	public void initializeWebsite(String Port) throws IOException, InterruptedException {
 		this.port = Port;
@@ -44,83 +47,78 @@ public class TestCase5 extends Configuration{
 		productsObj = new ProductsPage(driver);
 		signupLoginObj = new SignupLoginPage(driver);
 		signupFormObj = new SignupFormPage(driver);
+		createAccObj = new CreateAccountSuccessfulPage(driver);
 		ConfigProperties.initializePropertyFile();
-		
+		deleteAccObj = new DeleteAccountSuccessfulPage(driver);
+
+		path = ConfigProperties.property.getProperty("Path");
+
 		homeObj.navigateToSignupLoginPage();
-		
-		Thread.sleep(2000);
+
 		closeAd();
-		
+
 		signupLoginObj.signUp(port);
-		
-		Thread.sleep(2000);
+
 		closeAd();
-		
+
 		signupFormObj.fillDetails(port);
 		signupFormObj.createAccount();
-		createAccObj = new CreateAccountSuccessfulPage(driver);
-		Thread.sleep(2000);
+
 		closeAd();
 		createAccObj.createContinue();
-		Thread.sleep(2000);
+
 		closeAd();
 		homeObj.userLogOut();
 	}
-	
+
 	@Test
 	public void searchProductCase() throws InterruptedException, IOException {
 		closeAd();
 		homeObj.navigateToProductsPage();
-		
-		Thread.sleep(2000);
+
 		closeAd();
-		
+
 		productsObj.verifyProductsPage();
 		productsObj.searchProduct("dress");
-		
-		Thread.sleep(2000);
+
 		closeAd();
-		
+
 		productsObj.verifySearchProductsLabel();
 		productsObj.addAllSearchedItemsToCart();
 		productsObj.navigateToCartPage();
-		
-		Thread.sleep(2000);
+
 		closeAd();
-		
+
 		cartObj.navigateToSignupLoginPage();
-		
-		Thread.sleep(2000);
+
 		closeAd();
-		
+
 		signupLoginObj.validLogin(port);
-		
-		Thread.sleep(2000);
+
 		closeAd();
-		
+
 		homeObj.navigateToCartPage();
 		closeAd();
-		screenShotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		screenShotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		homeObj.deleteAccount();
-		deleteAccObj = new DeleteAccountSuccessfulPage(driver);
-		
-		Thread.sleep(2000);
+
 		closeAd();
-		
+
 		deleteAccObj.deleteContinue();
-		
+
 	}
-	
+
 	@AfterMethod
-	public void cleanUp() throws InterruptedException, IOException{
-		
-		
-		if(port.equals("5555")) {
-			Files.copy(screenShotFile, new File("C:\\Users\\maXx\\ProjectScreenshots\\testcase5chrome.png"));
-		}else {
-			Files.copy(screenShotFile, new File("C:\\Users\\maXx\\ProjectScreenshots\\testcase5edge.png"));
+	public void cleanUp() throws InterruptedException, IOException {
+
+		if (port.equals("5555")) {
+			Files.copy(screenShotFile, new File(path + "chrome "
+					+ new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss").format(Calendar.getInstance().getTime()) + ".png"));
+		} else {
+			Files.copy(screenShotFile, new File(path + "edge "
+					+ new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss").format(Calendar.getInstance().getTime()) + ".png"));
 		}
-		
+
 		driver.quit();
 	}
 }

@@ -4,13 +4,12 @@
   <test thread-count="2" parallel="tests" name="Chrome Test(failed)">
     <parameter name="Port" value="5555"/>
     <classes>
-      <class name="org.testcases.TestCase5">
+      <class name="org.testcases.TestCase4">
         <methods>
-          <include name="cleanUp"/>
-          <include name="searchProductCase"/>
+          <include name="removeItemsTestCase"/>
           <include name="initializeWebsite"/>
         </methods>
-      </class> <!-- org.testcases.TestCase5 -->
+      </class> <!-- org.testcases.TestCase4 -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
